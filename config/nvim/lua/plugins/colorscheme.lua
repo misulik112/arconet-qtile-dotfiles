@@ -1,11 +1,10 @@
 return {
-  { 
-    "EdenEast/nightfox.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("nightfox").setup({})
-      vim.cmd("colorscheme nordfox")
-    end,
+  -- Nord
+  { "shaunsingh/nord.nvim" },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "nord",
+    },
   },
 }
