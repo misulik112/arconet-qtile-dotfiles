@@ -1,10 +1,9 @@
 #!/bin/bash
 
 function run {
-  if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null;
-  then
-    $@&
-  fi
+	if ! pgrep -x $(basename $1 | head -c 15) 1>/dev/null; then
+		$@ &
+	fi
 }
 
 #Set your native resolution IF it does not exist in xrandr
@@ -36,8 +35,7 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
 
 # run Xmodmap
-xmodmap $HOME/.Xmodmap
-
+run xmodmap $HOME/.Xmodmap
 
 #starting utility applications at boot time
 run variety &
