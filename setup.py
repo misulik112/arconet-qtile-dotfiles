@@ -39,7 +39,6 @@ def adding_configs():
             ("tmux.conf", "~/.tmux.conf"),
             ("zshrc", "~/.zshrc"),
             ("nvim", "~/.config/nvim"),
-            ("qtile", "~/.config/qtile")
         ]
         for config, destination in configs:
             source_path = os.path.abspath(f"config/{config}")
